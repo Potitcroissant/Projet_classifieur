@@ -1,3 +1,5 @@
+*Ceci n'est qu'un brouillon, il y a encore beaucoup de choses à modifier*
+
 # Introduction :
 
 ## Le rap en France :
@@ -11,10 +13,43 @@ D’abord populaire, le RnB  est un genre musical né aux États-Unis dans les a
 
 Nous avons choisi de travailler sur un corpus de musiques de rap et de RnB contemporain français. Chaque artiste a une plume qui lui est propre, parfois reconnaissable à l’écrit.  Ainsi, l’objectif de notre projet serait d’établir une étiquette par artiste, afin que le système puisse associer la musique à son étiquette (=artiste).
 
+
 **Il faut tester au moins deux des algorithmes suivants**
 
 # J48
+En utilisant une **cross-validation** sur 10 folds: 
+- Documents classifiés correctement: 323 (77%)
+- Documents mal cassifiés: 95 (22%)
+
+- Meilleur F-mesure: Aya Nakamura
+- Moins bonne F-mesure: Booba
+
 
 # Naive Bayes
+En utilisant une **cross-validation** sur 10 folds: 
+- Documents classifiés correctement: 351 (84%)
+- Documents mal cassifiés: 66 (15%)
+
+- Meilleur F-mesure: JUL
+- Moins bonne F-mesure: Booba
+
 
 # SVM
+En utilisant une **cross-validation** sur 10 folds: 
+- Documents classifiés correctement: 349 (83%)
+- Documents mal cassifiés: 69 (16%)
+
+- Meilleur F-mesure: JUL
+- Moins bonne F-mesure: Booba
+
+
+
+# Hypothèses
+Je pense que si les résultats sont aussi bon, c'est sûrement parce que quand l'artiste fait une collaboration, les paroles indiquent qui chante, donc le nom de l'artiste est écrit dans le document (oups)
+Après, Aya Nakamura dit son nom dans pratiquement toutes ses chansons mais le classifieurs n'est pas parfait non plus.
+
+Est-il nécessaire d'essayer d'autres manières de séparer le corpus ? Avec 418 documents, est-ce qu'on a besoin de faire un train/test ?
+
+
+# Axes d'amélioration
+- Essayer de retirer le nom des artistes dans les musiques en contenant plusieurs pour observer des changements
